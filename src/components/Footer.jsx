@@ -6,8 +6,8 @@ const avatarSrc = "https://avatars.githubusercontent.com/u/25058652";
 const Footer = () => {
   return (
     <Box
-      bgColor={"blackAlpha.900"}
-      color={"whiteAlpha.700"}
+      bgColor={"white"}
+      color={"purple"}
       minH={"48"}
       px={"16"}
       py={["16", "8"]}
@@ -25,9 +25,11 @@ const Footer = () => {
           </Text>
         </VStack>
 
-        <VStack>
-          <Avatar boxSize={"28"} mt={["4", "0"]} src={avatarSrc} />
+        <VStack alignItems={"flex-start"}>
+          
+          
           <Text>Our Founder</Text>
+          <Text fontSize={15}>Yogesh Mundra</Text>
         </VStack>
       </Stack>
     </Box>

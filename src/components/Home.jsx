@@ -1,11 +1,15 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text,Stack ,VStack} from "@chakra-ui/react";
 import React from "react";
 import btcSrc from "../assets/btc.png";
 import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <Box bgColor={"blackAlpha.900"} w={"full"} h={"85vh"}>
+    
+    <Stack  alignItems={'center'}
+    direction={{ base: "column", md: "row" }}
+    spacing={4} justifyContent={"space-evenly"} bgColor={"white"} w={"full"} h={"full"}>
+    <Box  w={"30"} h={"full"} className="homecontainer">
       <motion.div
         style={{
           height: "80vh",
@@ -20,24 +24,51 @@ const Home = () => {
         }}
       >
         <Image
-          w={"full"}
-          h={"full"}
+          w={"50"}
+          h={"600"}
           objectFit={"contain"}
           src={btcSrc}
           filter={"grayscale(1)"}
         />
       </motion.div>
+    </Box>
+    <Box>
+      <VStack alignItems="flex-start">
+      <motion.div
+      initial={{ y: "100vh" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 1, type: "spring", stiffness: 120 }}
+    >
+      
+        
 
       <Text
         fontSize={"6xl"}
         textAlign={"center"}
+        justifyContent={"center"}
         fontWeight={"thin"}
-        color={"whiteAlpha.700"}
-        mt={"-20"}
+        color={"purple"}
+       
+        mr={"30"}
       >
-        Xcrypto
+       CryptoInsight
       </Text>
+      <Text
+        fontSize={"3xl"}
+        textAlign={"center"}
+        justifyContent={"center"}
+        fontWeight={"thin"}
+        color={"purple"}
+       
+        mr={"30"}
+      >
+       Gain valuable insights into the cryptocurrency market
+      </Text>
+      </motion.div>
+      </VStack>
     </Box>
+    </Stack>
+    
   );
 };
 
