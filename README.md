@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App]
 
+[Link] https://crypto-insight-1yswpzltb-yogeshmun0304.vercel.app/
+
+
 ## Available Scripts
 
 In the project directory, you can run:
